@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('categories/', views.category, name='categories'),
     path('category/',include('blogs.urls')),
+    path('blog/', include('blogs.urls')),
 ]
 
 # serve media files in development

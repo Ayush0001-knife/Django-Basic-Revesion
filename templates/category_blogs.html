@@ -112,7 +112,7 @@
                               {{ blog.short_description }}
                         </div>
 
-                        <a href="#" class="read-btn">Read Blog</a>
+                        <a href="{% url 'blog_detail' blog.category.id blog.slug %}" class="read-btn">Read Blog</a>
 
                   </div>
 

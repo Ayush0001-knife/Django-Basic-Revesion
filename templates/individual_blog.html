@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>{{ blog.title }}</title>
+
+      <style>
+            body {
+                  font-family: Arial;
+                  background: #f4f6fb;
+                  padding: 40px;
+            }
+
+            .container {
+                  max-width: 800px;
+                  margin: auto;
+                  background: white;
+                  padding: 40px;
+                  border-radius: 10px;
+                  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            img {
+                  width: 100%;
+                  border-radius: 8px;
+                  margin-bottom: 20px;
+            }
+
+            h1 {
+                  margin-bottom: 10px;
+            }
+
+            .meta {
+                  color: #777;
+                  margin-bottom: 20px;
+            }
+
+            .content {
+                  line-height: 1.7;
+                  font-size: 16px;
+            }
+      </style>
+
+</head>
+
+<body>
+
+      <div class="container">
+
+            <img src="{{ blog.blog_image.url }}">
+
+            <h1>{{ blog.title }}</h1>
+
+            <div class="meta">
+                  Category: {{ blog.category.category_name }} |
+                  Author: {{ blog.author.username }} |
+                  Published: {{ blog.created_at|date:"M d, Y" }}
+            </div>
+
+            <p>{{ blog.short_description }}</p>
+
+            <hr>
+
+            <div class="content">
+                  {{ blog.blog_body }}
+            </div>
+
+      </div>
+
+</body>
+
+</html>

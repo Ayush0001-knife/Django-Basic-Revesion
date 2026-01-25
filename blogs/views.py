@@ -14,3 +14,16 @@ def category_blogs(request, category_id):
     }
 
     return render(request, "category_blogs.html", context)
+
+
+def blog_detail(request, category_id, blog_slug):
+    
+    category = Category.objects.get(id=category_id)
+
+    blog = Blogs.objects.get(category=category, slug=blog_slug)
+
+    context = {
+        "blog": blog
+    }
+
+    return render(request, "individual_blog.html", context)

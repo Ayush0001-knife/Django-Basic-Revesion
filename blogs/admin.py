@@ -14,4 +14,3 @@ class BlogAdmin(admin.ModelAdmin):
 
 admin.site.register(Blogs, BlogAdmin)    
 
-# hii i am aysuh 
