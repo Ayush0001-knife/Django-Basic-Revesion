@@ -1,91 +1,37 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="{% static 'css/home.css' %}">
-      <title>MyBlog | Home</title>
+      <title>My Blog</title>
+
 
 </head>
 
 <body>
 
-      <!-- NAVBAR -->
+      <div class="container">
 
-      <div class="navbar">
-            <div class="logo">MyBlog</div>
+            <h1>Welcome to My Blog Project</h1>
 
-            <div class="nav-links">
-                  <a href="#">Home</a>
-                  <a href="#">Articles</a>
-                  <a href="#">Categories</a>
-                  <a href="#">About</a>
-                  <a href="#">Login</a>
+            <p>Read blogs or share your own ideas with the world.</p>
+
+            <div class="buttons">
+
+                  <a href="#" class="btn view-btn">
+                        View Blogs
+                  </a>
+
+                  <a href="#" class="btn post-btn">
+                        Post Blog
+                  </a>
+
             </div>
+
       </div>
-
-
-      <!-- HERO -->
-
-      <section class="hero">
-
-            <div>
-                  <h1>Share Your Ideas With The World</h1>
-                  <p>Read amazing blogs about tech, productivity, and life.</p>
-
-                  <button>Start Reading</button>
-            </div>
-
-      </section>
-
-
-      <!-- FEATURED POSTS -->
-
-      <section class="section">
-
-            <h2>Featured Posts</h2>
-
-            <div class="posts">
-
-                  <div class="post-card">
-                        <h3>How to Learn Programming Fast</h3>
-                        <p>Discover the best strategies to master coding quickly.</p>
-                        <a href="#" class="read-btn">Read More →</a>
-                  </div>
-
-                  <div class="post-card">
-                        <h3>Top 10 Productivity Tips</h3>
-                        <p>Boost your daily productivity with simple habits.</p>
-                        <a href="#" class="read-btn">Read More →</a>
-                  </div>
-
-                  <div class="post-card">
-                        <h3>Getting Started with Django</h3>
-                        <p>A beginner-friendly guide to building web apps.</p>
-                        <a href="#" class="read-btn">Read More →</a>
-                  </div>
-
-            </div>
-
-      </section>
-
-
-      <!-- CTA -->
-
-      <section class="cta">
-
-            <h2>Start Your Blogging Journey Today</h2>
-            <button>Create Account</button>
-
-      </section>
-
-
-      <!-- FOOTER -->
-
-      <footer>
-            © 2026 MyBlog | Built with Django
-      </footer>
 
 </body>
 

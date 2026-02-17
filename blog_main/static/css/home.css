@@ -2,151 +2,113 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
+
+/* Animated Gradient Background */
 
 body{
-    background:#f5f7fa;
-}
-
-/* NAVBAR */
-
-.navbar{
-    background:#111;
-    color:white;
-    padding:18px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:24px;
-    font-weight:bold;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-size:16px;
-}
-
-.nav-links a:hover{
-    color:#00bcd4;
-}
-
-/* HERO SECTION */
-
-.hero{
-    height:85vh;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #6dd5ed,
+        #2193b0
+    );
+
+    background-size:400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Gradient animation */
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Glass Card */
+
+.container{
+    padding:70px 90px;
     text-align:center;
-    background:linear-gradient(to right,#4facfe,#00f2fe);
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
+
     color:white;
-    padding:40px;
 }
 
-.hero h1{
+/* Heading */
+
+h1{
     font-size:48px;
-    margin-bottom:20px;
+    margin-bottom:15px;
+    letter-spacing:1px;
 }
 
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
-}
+/* Subtitle */
 
-.hero button{
-    padding:14px 35px;
+p{
+    margin-bottom:45px;
     font-size:18px;
-    border:none;
+    opacity:0.9;
+}
+
+/* Buttons */
+
+.buttons{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+}
+
+/* Base button */
+
+.btn{
+    text-decoration:none;
+    padding:14px 34px;
     border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+
+    transition: all 0.3s ease;
+}
+
+/* View Blogs */
+
+.view-btn{
     background:white;
     color:#333;
-    cursor:pointer;
-    transition:0.3s;
 }
 
-.hero button:hover{
-    background:#222;
+.view-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,255,255,0.3);
+}
+
+/* Post Blog */
+
+.post-btn{
+    background:#ff7a18;
+    background: linear-gradient(45deg,#ff7a18,#ffb347);
     color:white;
 }
 
-/* FEATURED POSTS */
-
-.section{
-    padding:80px 10%;
-}
-
-.section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:32px;
-}
-
-.posts{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.post-card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.post-card:hover{
-    transform:translateY(-5px);
-}
-
-.post-card h3{
-    margin-bottom:10px;
-}
-
-.post-card p{
-    color:#555;
-    margin-bottom:15px;
-}
-
-.read-btn{
-    text-decoration:none;
-    color:#00a2ff;
-    font-weight:bold;
-}
-
-/* CTA */
-
-.cta{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:70px 20px;
-}
-
-.cta h2{
-    margin-bottom:20px;
-}
-
-.cta button{
-    padding:12px 30px;
-    font-size:16px;
-    border:none;
-    background:#00bcd4;
-    color:white;
-    border-radius:30px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#000;
-    color:#bbb;
-    text-align:center;
-    padding:20px;
+.post-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,122,24,0.6);
 }
