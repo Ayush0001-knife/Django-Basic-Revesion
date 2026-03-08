@@ -13,3 +13,5 @@ class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields={'slug':('title',)}
 
 admin.site.register(Blogs, BlogAdmin)    
+
+# hii i am aysuh 
